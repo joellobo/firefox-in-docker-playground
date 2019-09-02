@@ -7,3 +7,8 @@ http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
 sudo docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix firefox
 
 sudo docker run -e DISPLAY -v $HOME/.Xauthority:/home/64943127304/.Xauthority --net=host firefox xhost local:root
+
+echo $UID
+getent group sudo | awk -F: '{printf "Group %s with GID=%d\n", $1, $3}'
+
+
