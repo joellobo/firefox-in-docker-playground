@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y firefox
+RUN apt-get update && apt-get install -y sudo firefox libcanberra-gtk-module libcanberra-gtk3-module
 
 RUN export uid=649431273 gid=27 && \
     mkdir -p /home/64943127304 && \
